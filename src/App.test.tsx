@@ -1,4 +1,4 @@
-import { render, fireEvent, screen } from "@testing-library/react";
+import { render, fireEvent } from "@testing-library/react";
 import React from "react";
 import App from "./App";
 
@@ -6,8 +6,13 @@ import { describe, expect, test } from "vitest";
 
 describe("<App />", () => {
   describe("loading character", () => {
-    test('renders the title "Characters"', async () => {});
-    test("renders a list of 10 characters", async () => {});
+    test('renders the title "Characters"', async () => {
+      const { getByText, debug } = render(<App />);
+      expect(getByText("Characters")).not.toBeNull();
+    });
+    test("renders a list of 10 characters", async () => {
+      
+    });
   });
   describe("loading more characters", () => {
     test('has a "Load More Characters" button', async () => {});
