@@ -7,7 +7,7 @@ interface CharacterProps {
 
 export default function Character({ character }: CharacterProps) {
   return (
-    <div>
+    <div data-testid="character">
       <div>
         <strong>name </strong>
         {character.name ? character.name : character.aliases[0]}
@@ -16,7 +16,7 @@ export default function Character({ character }: CharacterProps) {
         <strong>culture </strong> {character.culture}
       </div>
       <div>
-        <strong>Number of Books: </strong> {character.books.length}
+        <strong>Number of Books: {character.books?.length}</strong>
       </div>
     </div>
   );
