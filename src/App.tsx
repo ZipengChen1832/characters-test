@@ -14,6 +14,7 @@ export default function App(): JSX.Element {
   useEffect(() => {
     const fetchCharacters = async () => {
       const newCharacters = await getCharacters(pageNumber);
+      console.log("newCharacters=", newCharacters);
       setCharacters(newCharacters);
     };
 
