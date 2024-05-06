@@ -7,7 +7,7 @@ interface CharacterProps {
 
 export default function Character({ character }: CharacterProps) {
   return (
-    <div>
+    <div data-testid="character">
       <div>
         <strong>name </strong>
         {character.name ? character.name : character.aliases[0]}
